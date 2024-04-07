@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Recipe page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+     *,*::before,*::after{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+     }
+     @font-face {
+      font-family: "young-serif";
+      src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf");
+     }
+     @font-face {
+      font-family: "outfit";
+      src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf");
+     }
+     body{
+      font-family: "outfit";
+      font-size: 17px;
+     }
+     .recipe__title,.ingredients__title,.instructions__title,.nutrition__title,.nutrition__title{
+      font-family: "young-serif";
+     }
+
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="flex justify-center items-center bg-[#F3E5D8] ">
+
+    <!--- Recipe Card -->
+  <div class="recipe flex flex-col rounded-xl p-10 w-[750px] h-auto bg-[#fff] md:mt-10 m-8 shadow-md">
+    <!-- Recipe Top Image-->
+    <img src="./assets/images/image-omelette.jpeg" class="recipe__img rounded-xl aspect-autoh min-h-[200px] sm:min-h-auto " alt="">
+    <!-- Recipe Title-->
+    <div class="recipe__title text-4xl py-10 font-bold text-[#151515]">
+      Simple Omelette Recipe
+    </div>
+    <!-- Recipe Intro-->
+    <div class="recipe__text">
+      <p class="font-medium text-[#62605C]"> An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+        to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+      </p>
+    </div>
+    <!-- Recipe Propation Time Card-->
+    <div class="recipe__time p-10 bg-[#FFF7FC] p-6 my-10 rounded-2xl shadow-sm">
+      <div class="recipe__time__title text-[#774D63]">
+        <h3 class="text-2xl font-semibold">  Preparation time  </h3>
+      </div>
+      <ul class="recipe__time__unorderlist list-disc px-6 my-4">
+        <li class="my-2 px-4"><b>Total: </b>Approximately 10 minutes</li>
+        <li class="my-2 px-4"><b>Preparation: </b>5 minutes</li>
+        <li class="my-2 px-4"><b>Cooking: </b>5 minutes</li>
+      </ul>
+    </div>
+
+    <!-- Recipe Ingrediants Card -->
+    <div class="ingredients border-b-3 ">
+      <!-- ingredients title -->
+      <h2 class="ingredients__title text-3xl font-medium text-[#774D63]">Ingredients</h2>
+      <!-- ingredients list-->
+      <ul class="ingredients_list list-disc px-6 my-6">
+        <li class="my-3"><p class="ms-3">2-3 large eggs</p></li>
+        <li class="my-3"><p class="ms-3">Salt, to taste</p></li>
+        <li class="my-3"><p class="ms-3">Pepper, to taste</p></li>
+        <li class="my-3"><p class="ms-3">1 tablespoon of butter or oil</p></li>
+        <li class="my-3"><p class="ms-3">Optional fillings: cheese, diced vegetables, cooked meats, herbs</p></li>
+      </ul>
+
+    </div>
+
+    <!--Instrction Card-->
+    <div class="instructions my- border-b-3 my-2">
+      <!-- instrcution title-->
+      <h2 class="instructions__title text-3xl font-medium text-[#774D63] font-black">Instructions</h2>
+      <!-- instruciton list-->
+      <ol class="instructions__list list-decimal px-6 my-6 leading-7">
+        
+        <!-- Line-->
+        <li class="my-3">
+          <p class="ms-3">
+            <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+            You can add a tablespoon of water or milk for a fluffier texture.
+          </p>
+        </li>
+        <!-- Line-->
+        <li class="my-3">
+          <p class="ms-3">
+            <strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.
+          </p>
+        </li>
+        <!-- Line-->
+        <li class="my-3">
+          <p class="ms-3">
+            <strong>Cook the omelette:</strong>  Cook the omelette: Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+            the eggs evenly coat the surface.
+          </p>
+        </li>
+        <!-- Line-->
+        <li class="my-3">
+          <p class="ms-3">
+            <strong>Add fillings (optional):</strong>  Add fillings (optional): When the eggs begin to set at the edges but are still slightly runny in the 
+            middle, sprinkle your chosen fillings over one half of the omelette.
+          </p>
+        </li>
+        <!-- Line-->
+        <li class="my-3">
+          <p class="ms-3">
+            <strong>Enjoy:</strong> As the omelette continues to cook, carefully lift one edge and fold it over the 
+            fillings. Let it cook for another minute, then slide it onto a plate.
+          </p>
+        </li>
+        <!-- Line-->
+        <li class="my-3">
+          <p class="ms-3">
+            <strong>Beat the eggs:</strong> Enjoy: Serve hot, with additional salt and pepper if needed.
+          </p>
+        </li>
+
+      </ol>
+
+    </div>
+
+
+    <!-- Nutrition Card-->
+    <div class="nutriiton">
+    <!-- Nutrition Title-->
+      <div class="nutrition__title">
+        <h3 class="text-3xl text-[#774D63] font-medium"> Nutrition</h3>
+      </div>
+    <!-- Nutritiontext-->
+      <div class="nutrition__text py-6">
+        The table below shows nutritional values per serving without the additional fillings.
+      </div>
+    <!-- Nutrition table-->
+      <div class="nutrition__table font-medium text-[#6A6A6A]">
+
+        <!-- Nutrition__Row-->
+         <div class="nutrition__table__col flex flex-row border-b-[3px] py-3">
+          <div class="nutrition__table__col__name flex-1">
+            <p class="px-10">Calories</p>
+          </div>
+          <div class="nutrition__table__col__measure flex-1">
+            <p class="px-10 text-[#774D63] font-bold"><b>277kcal</b></p>
+          </div>
+         </div>
+        <!-- Nutrition__Row-->
+         <div class="nutrition__table__col flex flex-row border-b-[3px] py-4">
+          <div class="nutrition__table__col__name flex-1">
+            <p class="px-10">Carbs</p>
+          </div>
+          <div class="nutrition__table__col__measure flex-1">
+            <p class="px-10 text-[#774D63] font-bold"><b>0g</b></p>
+          </div>
+         </div>
+        <!-- Nutrition__Row-->
+         <div class="nutrition__table__col flex flex-row border-b-[3px] py-4">
+          <div class="nutrition__table__col__name flex-1">
+            <p class="px-10">Protein</p>
+          </div>
+          <div class="nutrition__table__col__measure flex-1">
+            <p class="px-10 text-[#774D63] font-bold"><b>20g</b></p>
+          </div>
+         </div>
+        <!-- Nutrition__Row-->
+         <div class="nutrition__table__col flex flex-row py-4">
+          <div class="nutrition__table__col__name flex-1">
+            <p class="px-10">Fat</p>
+          </div>
+          <div class="nutrition__table__col__measure flex-1">
+            <p class="px-10 text-[#774D63] font-bold"><b>22g</b></p>
+          </div>
+         </div>
+ 
+      </div>
+    </div>
+
+  <!-- Recipe Card Ends -->
+  </div>
+  
+  
+
+  
+</body>
+</html>
